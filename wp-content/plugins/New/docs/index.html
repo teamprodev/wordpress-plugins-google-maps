@@ -1,0 +1,427 @@
+<!-- Elfsight © elfsight.com -->
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Elfsight Google Maps Documentation</title>
+
+		<link href="http://fonts.googleapis.com/css?family=Roboto:400,300,500&subset=latin,cyrillic-ext,cyrillic" rel="stylesheet">
+		<link rel="stylesheet" href="assets/vendor/css/normalize.css">
+		<link rel="stylesheet" href="assets/vendor/lib/foundation/foundation.min.css">
+		<link rel="stylesheet" href="assets/vendor/lib/highlight/default.css">
+		<link rel="stylesheet" href="assets/css/main.css">
+
+		<script src="assets/vendor/js/modernizr.js"></script>
+		<script src="assets/vendor/js/jquery-1.11.2.min.js"></script>
+		<script src="assets/vendor/lib/highlight/highlight.pack.js"></script>
+		<script src="assets/js/elfsight-google-maps.js"></script>
+		<script src="assets/vendor/lib/foundation/foundation.min.js"></script>
+		<script src="assets/js/main.js"></script>
+	</head>
+
+	<body>
+		<header class="header container">
+			<div class="row">
+				<div class="medium-12 columns">
+					<h1>Get started with Elfsight Google Maps 2.4.2</h1>
+
+					<div class="header-social">
+						<a class="icon-facebook icon" href="http://facebook.com/elfsight" target="_blank"></a>
+						<a class="icon-twitter icon" href="http://twitter.com/elfsight" target="_blank"></a>
+						<a class="icon-google-plus icon" href="https://plus.google.com/+Elfsight/" target="_blank"></a>
+						<a class="icon-instagram icon" href="http://instagram.com/elfsight" target="_blank"></a>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<section class="install container">
+			<div class="row">
+				<div class="medium-12 columns">
+					<h2>Installation</h2>
+				</div>
+			</div>
+
+			<div class="install-step row">
+				<div class="medium-12 columns">
+					<p>1. Install Elfsight Google Maps WordPress Plugin <code>elfsight-google-maps-cc.zip</code> to your website. Don't know how? <a href="https://codex.wordpress.org/Managing_Plugins" target="_blank">Please learn here</a>.</p>
+				</div>
+			</div>
+
+			<div class="install-step row">
+				<div class="medium-12 columns">
+					<p>2. Go to Google Maps page in WordPress admin menu.</p>
+				</div>
+			</div>
+
+			<div class="install-step row">
+				<div class="medium-12 columns">
+					<p>3. Create a new widget, adjust all settings and get a ready-made shortcode.</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="wordpress-shortcode container">
+			<div class="row">
+				<div class="medium-12 columns">
+					<h3>Use Google Maps as a <strong>WordPress Shortcode</strong></h3>
+
+					<br><br>
+					<h4>1. Create a new widget</h4>
+					<p>You can use Elfsight Google Maps as a WordPress shortcode. To do this, you have to create a new widget, set all options in the Elfsight editor and save it.</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="medium-12 columns">
+					<h4>2. Copy-paste the shortcode</h4>
+					<p>You will see the new widget's shortcode in the widgets list. You can copy-paste it into the required place of your website.</p>
+
+					<p>Example of the Elfsight Google Maps shortcode:<br>
+					<pre><code class="html hljs xml">[elfsight_google_maps id="1"]</code></pre>
+				</div>
+			</div>
+		</section>
+
+		<section class="wordpress-block container">
+			<div class="row">
+				<div class="medium-12 columns">
+					<h3>Use Google Maps as a<br> <strong>Gutenberg Block</strong></h3>
+
+					<p>You can use Elfsight Google Maps as a block for Gutenberg editor. Just add it to your page during page building and select one of the available Google Maps widgets from the list.</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="wordpress-widget container">
+			<div class="row">
+				<div class="medium-12 columns">
+					<h3>Use Google Maps as a<br> <strong>WordPress Widget</strong></h3>
+
+					<p>To use Elfsight Google Maps as a WordPress widget, go to Appearance&nbsp;->&nbsp;Widgets, and drag Elfsight Google Maps WordPress widget to any widget section. Next, select one of available Google Maps widgets from the list.</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="wordpress-vc container">
+			<div class="row">
+				<div class="medium-12 columns" style="margin-top:60px;">
+					<h3>Use Google Maps as a<br> <strong>Visual Composer Element</strong></h3>
+
+					<p>You can use Elfsight Google Maps as a Visual Composer element. Just add it to your page during page building and select one of the available Google Maps widgets from the list.</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="options container">
+			<div class="row">
+				<div class="medium-12 columns">
+					<h2>Options</h2>
+
+					<table class="options-table">
+						<thead>
+							<tr>
+								<th>Option</th>
+								<th>Default Value</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+
+						<tbody>
+							<tr>
+								<td class="options-category-title" colspan="4">Markers</td>
+							</tr>
+
+							<tr>
+								<td>Markers <span class="options-required" title="Required option">*</span></td>
+								<td>null</td>
+								<td>Set the list of markers to be displayed on a map. The following parameters can be configured for each marker:
+									<ul>
+										<li><b>Position</b> - Set the marker's position. You can set its name or address in text format or set the specific coordinates (latitude, longitude separated by a comma).</li>
+										<li><b>Icon</b> - Set the marker's icon. You can select a default Google Map icon, or one of the icons from our library. If you can't find the icon you're looking for, you can set custom icon URL or request a new icon at support@elfsight.com</li>
+										<li><b>infoWindow</b> - The option allows you to open an information window by clicking on the marker.</li>
+										<li><b>infoTitle</b> - Set the marker's title for the info window. Usually, it's the name of the place marker indicates.</li>
+										<li><b>infoDescription</b> - The marker's description on the info window.</li>
+										<li><b>infoImage</b> - Set the URL of the image to be displayed on the info window. Usually, it's an image of the indicated place.</li>
+										<li><b>infoAddress</b> - Set the address to be displayed on the info window.</li>
+										<li><b>infoSite</b> - Set the website URL to be displayed on the info window.</li>
+										<li><b>infoPhone</b> - Set the phone number to be displayed on the info window.</li>
+										<li><b>infoEmail</b> - Set the email to be displayed on the info window.</li>
+										<li><b>infoWorkingHours</b> - Set the working hours to be displayed on the info window.</li>
+										<li><b>infoDirections</b> - Display directions button in the info window. This button allows to set the directions from your current position to the marker. Works only with https.</li>
+										<li><b>infoWindowOpenedByDefault</b> - The option allows you to make an information window opened by default.</li>
+										<li><b>animation</b> - Select marker animation from the available ones: drop, bounce.</li>
+										<li><b>linkUrl</b> - Set the link URL and this link will be opened in a new browser tab by clicking on the marker.</li>
+									</ul>
+								</td>
+							</tr>
+
+							<tr>
+								<td class="options-category-title" colspan="4">Layout</td>
+							</tr>
+
+							<tr>
+								<td>Width</td>
+								<td>auto</td>
+								<td>Set the map width in pixels or %, or set "auto" and the plugin will fit its container width.</td>
+							</tr>
+
+							<tr>
+								<td>Height</td>
+								<td>700</td>
+								<td>Set the map height in pixels.</td>
+							</tr>
+
+							<tr>
+								<td>Locations Panel - Display panel</td>
+								<td>true</td>
+								<td>Activate this setting to display your locations in a side panel. Clicking on a location in the list will bring up its info window on the map.</td>
+							</tr>
+
+							<tr>
+								<td>Locations Panel - Show / hide by default</td>
+								<td>true</td>
+								<td>Activate this setting to display the open locations list by default. Deactivate it to display only the panel header by default.</td>
+							</tr>
+
+							<tr>
+								<td>Locations Panel - Panel Title</td>
+								<td>Locations List</td>
+								<td>Set the panel title depending on the locations type you display (e.g. Our stores, Our offices in New York).</td>
+							</tr>
+
+							<tr>
+								<td>Locations Panel - Location Elements</td>
+								<td>title, image, address, phone, working hours</td>
+								<td>Check the location elements to display for each location on the list.</td>
+							</tr>
+
+							<tr>
+								<td class="options-category-title" colspan="4">Map</td>
+							</tr>
+
+							<tr>
+			                    <td>Center (address, coordinates, auto)</td>
+			                    <td>auto</td>
+			                    <td>Set the default map center. You can set its name or address in text format or set the specific coordinates (latitude, longitude separated by a comma). Set "auto" to automatically calculate the center depending on the markers' position.</td>
+			                </tr>
+
+							<tr>
+								<td>Zoom (0-20, auto)</td>
+								<td>16</td>
+								<td>Set the default map zoom. It supports numeric values 0-20. You can also set "auto" and zoom will be calculated automatically to display all the set markers.</td>
+							</tr>
+
+							<tr>
+								<td>Map type</td>
+								<td>roadmap</td>
+								<td>Select your Google map type from the list (roadmap, satellite, hybrid, terrain).</td>
+							</tr>
+
+							<tr>
+								<td>Controls</td>
+								<td>zoom,<br>mapType,<br>scale,<br>streetView,<br>rotate,<br>fullscreen</td>
+								<td>Select the map controls to be displayed on the map.</td>
+							</tr>
+
+							<tr>
+								<td>Scroll wheel scaling</td>
+								<td>false</td>
+								<td>This option lets you scale the map with the mouse scrolling wheel.</td>
+							</tr>
+
+							<tr>
+								<td>Layers</td>
+								<td>null</td>
+								<td>Set the layers separated by comma to be displayed on the map. The following optinos are available: poi, traffic, transit, bike, streetView.</td>
+							</tr>
+
+							<tr>
+								<td>Language</td>
+								<td>en</td>
+								<td>Choose one of 7 available languages of the info window UI (dk, en, es, ja, pl, pt-br, ru).</td>
+							</tr>
+
+							<tr>
+								<td class="options-category-title" colspan="4">Style</td>
+							</tr>
+
+							<tr>
+								<td>Color scheme</td>
+								<td>default</td>
+								<td>Select one of the four predefined color schemes (default, silver, night, retro). Set custom colors to create your own scheme.</td>
+							</tr>
+
+							<tr>
+								<td>color_geometry</td>
+								<td>null</td>
+								<td>Set color for geometry.</td>
+							</tr>
+
+							<tr>
+								<td>color_labels_text_fill</td>
+								<td>null</td>
+								<td>Set color for labels text fill.</td>
+							</tr>
+							
+							<tr>
+								<td>color_labels_text_stroke</td>
+								<td>null</td>
+								<td>Set color for labels text stroke.</td>
+							</tr>
+							
+							<tr>
+								<td>color_administrative_geometry_stroke</td>
+								<td>null</td>
+								<td>Set color for administrative geometry stroke.</td>
+							</tr>
+
+							<tr>
+								<td>color_administrative_land_parcel</td>
+								<td>null</td>
+								<td>Set color for administrative land parcel.</td>
+							</tr>
+							
+							<tr>
+								<td>color_landscape_natural_geometry</td>
+								<td>null</td>
+								<td>Set color for landscape natural geometry.</td>
+							</tr>
+
+							<tr>
+								<td>color_poi_geometry</td>
+								<td>null</td>
+								<td>Set color for poi geometry.</td>
+							</tr>
+
+							<tr>
+								<td>color_poi_labels_text_fill</td>
+								<td>null</td>
+								<td>Set color for poi labels text fill.</td>
+							</tr>
+							
+							<tr>
+								<td>color_poi_park_geometry_fill</td>
+								<td>null</td>
+								<td>Set color for poi park geometry fill.</td>
+							</tr>
+
+							<tr>
+								<td>color_poi_park_labels_text_fill</td>
+								<td>null</td>
+								<td>Set color for poi park labels text fill.</td>
+							</tr>
+
+							<tr>
+								<td>color_road_geometry</td>
+								<td>null</td>
+								<td>Set color for road geometry.</td>
+							</tr>
+
+							<tr>
+								<td>color_road_arterial</td>
+								<td>null</td>
+								<td>Set color for road arterial.</td>
+							</tr>
+							
+							<tr>
+								<td>color_road_highway</td>
+								<td>null</td>
+								<td>Set color for road highway.</td>
+							</tr>
+
+							<tr>
+								<td>color_road_highway_geometry_stroke</td>
+								<td>null</td>
+								<td>Set color for road highway geometry stroke.</td>
+							</tr>
+
+							<tr>
+								<td>color_road_highway_controlled_access_geometry</td>
+								<td>null</td>
+								<td>Set color for road highway controlled access geometry.</td>
+							</tr>
+
+							<tr>
+								<td>color_road_highway_controlled_access_geometry_stroke</td>
+								<td>null</td>
+								<td>Set color for road highway controlled access geometry stroke.</td>
+							</tr>
+
+							<tr>
+								<td>color_road_local_labels_text_fill</td>
+								<td>null</td>
+								<td>Set color for road local labels text fill.</td>
+							</tr>
+
+							<tr>
+								<td>color_transit_line_geometry</td>
+								<td>null</td>
+								<td>Set color for transit line geometry.</td>
+							</tr>
+
+							<tr>
+								<td>color_transit_line_labels_text_fill</td>
+								<td>null</td>
+								<td>Set color for transit line labels text fill.</td>
+							</tr>
+
+							<tr>
+								<td>color_transit_line_labels_text_stroke</td>
+								<td>null</td>
+								<td>Set color for transit line labels text stroke.</td>
+							</tr>
+
+							<tr>
+								<td>color_transit_station_geometry</td>
+								<td>null</td>
+								<td>Set color for transit station geometry.</td>
+							</tr>
+
+							<tr>
+								<td>color_water_geometry_fill</td>
+								<td>null</td>
+								<td>Set color for water geometry fill.</td>
+							</tr>
+
+							<tr>
+								<td>color_water_label_text_fill</td>
+								<td>null</td>
+								<td>Set color for water label text fill.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+
+		<section class="support container">
+			<div class="row">
+				<div class="medium-12 columns">
+					<h2>Support, questions and offers</h2>
+
+					<p>Your questions and issue reports are processed on the first-come, first-served basis. Expect an answer from 10 a.m. to 7 p.m. CET, Monday through Friday.</p>
+
+					<a href="https://codecanyon.elfsight.com" target="_blank">
+	                    <span>Visit Support Center</span>
+	                </a>
+
+	                <br><br>
+				</div>
+			</div>
+		</section>
+
+		<footer class="footer container">
+			<div class="row">
+				<div class="medium-12 columns">
+					<h2>Keep in Touch</h2>
+					<a class="icon-facebook icon" href="http://facebook.com/elfsight" target="_blank"></a>
+					<a class="icon-twitter icon" href="http://twitter.com/elfsight" target="_blank"></a>
+					<a class="icon-google-plus icon" href="https://plus.google.com/+Elfsight/" target="_blank"></a>
+					<a class="icon-instagram icon" href="http://instagram.com/elfsight" target="_blank"></a>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html> 
